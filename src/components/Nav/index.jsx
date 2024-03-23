@@ -34,19 +34,19 @@ const Nav = () => {
             <div className="text-sm lg:flex-grow">
             <a
                 href="#responsive-header"
-                className="block px-8 py-4 lg:inline-block text-white hover:bg-gray-700 hover:scale-110 transition-transform duration-300"
+                className="rounded block px-8 py-4 lg:inline-block text-white hover:bg-gray-700 hover:scale-110 transition-transform duration-300"
             >
                 Link 1
             </a>
             <a
                 href="#responsive-header"
-                className="block px-8 py-4 lg:inline-block text-white hover:bg-gray-700 hover:scale-110 transition-transform duration-300"
+                className="rounded block px-8 py-4 lg:inline-block text-white hover:bg-gray-700 hover:scale-110 transition-transform duration-300"
             >
                 Link 2
             </a>
             <a
                 href="#responsive-header"
-                className="block px-8 py-4 lg:inline-block text-white hover:bg-gray-700 hover:scale-110 transition-transform duration-300"
+                className="rounded block px-8 py-4 lg:inline-block text-white hover:bg-gray-700 hover:scale-110 transition-transform duration-300"
             >
                 Link 3
             </a>

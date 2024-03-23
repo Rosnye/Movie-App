@@ -2,13 +2,14 @@ import React from 'react'
 import './App.css'
 import Nav from './components/Nav'
 import Carrousel from './components/Carroussel'
+import MovieCarousel from './components/MovieCarrousel'
 
 function App() {
 
   return (
-    <div className="h-screen bg-gray-800">
+    <div className="min-h-screen bg-gray-800">
       <Nav/>
-      <Carrousel/>
+      <MovieCarousel/>
     </div>
   )
 }
