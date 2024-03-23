@@ -13,7 +13,7 @@ export default defineConfig({
       preventAssignment: true,
       __myapp: JSON.stringify({
         env: {
-          REACT_APP_OMDB_API_KEY: process.env.REACT_APP_OMDB_API_KEY
+          VITE_REACT_APP_OMDB_API_KEY: process.env.VITE_REACT_APP_OMDB_API_KEY
         }
       })
     })
