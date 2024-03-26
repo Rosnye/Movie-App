@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const Carousel = () => {
     const [movies, setMovies] = useState([]);
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState('brooklyn');
     const [currentPage, setCurrentPage] = useState(2);
     const omdbApiKey = import.meta.env.VITE_REACT_APP_OMDB_API_KEY;
 
