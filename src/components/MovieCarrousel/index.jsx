@@ -73,7 +73,7 @@ const Carousel = () => {
                     </button>
                 </div>
             </div>
-            <div className="flex flex-wrap justify-center">
+            <div className="flex flex-wrap justify-center w-full 2xl:w-4/6">
                 {movies.map(movie => (
                     <a href={`https://www.google.com/search?q=${movie.Title}+movie`} key={movie.imdbID} className="rounded-md m-4 w-64
                         hover:scale-105 transition-transform duration-300 flex flex-col items-center bg-gradient-to-t from-Red to-Gold to-30%">
