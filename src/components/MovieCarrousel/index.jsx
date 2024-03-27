@@ -47,47 +47,50 @@ const Carousel = () => {
     };
 
     return (
-        <div className='flex flex-col items-center bg-neutral-500 rounded-lg m-8'>
-            <div className='flex items-center'>
+        <div className='flex flex-col items-center bg-neutral-500 bg-opacity-30 rounded-lg m-8'>
+            <div className='flex flex-col md:flex-row items-center'>
                 <input
                     type="text"
                     value={searchTerm}
                     onChange={handleInputChange}
                     placeholder="Buscar películas por título"
-                    className="m-4 p-2 border border-gray-300 rounded-md max-w-48 max-h-8"
+                    className="m-4 p-2 bg-Red text-White font-semibold rounded-md max-w-48 max-h-8"
                 />
                 <div className="flex items-center">
                     <button
                         onClick={goToPreviousPage}
                         disabled={currentPage === 1}
-                        className="m-2 hover:scale-105 transition-transform duration-200 px-4 py-2 hover:bg-teal-200 bg-teal-400 rounded-md"
+                        className="hover:scale-105 duration-200 transition-transform m-2 px-4 py-2 bg-Purple text-White font-semibold rounded-md"
                     >
-                        Página Anterior
+                        Anterior
                     </button>
-                    <h2 className='text-white bg-slate-700 flex items-center rounded px-2 h-8 underline underline-offset-2'>Pagina: {currentPage}</h2>
+                    <h2 className='text-White bg-Purple flex items-center rounded px-2 h-8 underline underline-offset-2'>Pagina: {currentPage}</h2>
                     <button
                         onClick={goToNextPage}
-                        className="hover:scale-105 duration-200 transition-transform hover:bg-teal-200 m-2 px-4 py-2 bg-teal-400 rounded-md"
+                        className="hover:scale-105 duration-200 transition-transform m-2 px-4 py-2 bg-Purple text-White font-semibold rounded-md"
                     >
-                        Siguiente Página
+                        Siguiente
                     </button>
                 </div>
             </div>
             <div className="flex flex-wrap justify-center">
                 {movies.map(movie => (
-                    <a href={`https://www.google.com/search?q=${movie.Title}+movie`} key={movie.imdbID} className="m-4 w-64
-                        hover:scale-105 transition-transform duration-300 rounded flex flex-col items-center bg-slate-400">
+                    <a href={`https://www.google.com/search?q=${movie.Title}+movie`} key={movie.imdbID} className="rounded-md m-4 w-64
+                        hover:scale-105 transition-transform duration-300 flex flex-col items-center bg-gradient-to-t from-Red to-Gold to-30%">
                         
-                        <div className='bg-gray-800 w-full'>
+                        <div className='flex items-center w-64 h-5/6 top-0 static rounded-lg'>
                             {movie.Poster === "N/A" ? (
                                 // Si la respuesta de la API es "N/A", muestra la imagen por defecto
-                                <img src="./assets/cinema-default.svg" alt="Imagen por defecto" />
+                                <div className='flex flex-col items-center font-semibold'>
+                                    <img src="./assets/cinema-default.svg" alt="Imagen por defecto" />
+                                    <h3>*Poster no disponible*</h3>
+                                </div>
                             ) : (
                                 // Si la respuesta de la API no es "N/A", muestra la imagen recibida
-                                <img src={movie.Poster} alt={`${movie.Title} Poster`} />
+                                <img src={movie.Poster} alt={`${movie.Title} Poster`} className='rounded-t'/>
                             )}
                         </div>
-                        <h2 className="p-2 flex items-center text-black text-xl font-mono text-center bg-white rounded-b">{movie.Title}</h2>
+                        <h2 className="pt-2 flex justify-center h-1/6 items-center text-black text-xl font-semibold text-center w-full">{movie.Title}</h2>
                     </a>
                 ))}
             </div>

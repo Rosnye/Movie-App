@@ -5,7 +5,18 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage:{
+        'Squares':"url('./assets/protruding-squares.svg')",
+      },
+    },
+    colors:{
+      'Purple':'#5F0F40',
+      'Red':'#9A031E',
+      'Orange':'#FB8B24',
+      'Gold':'#E36414',
+      'White':'#FFFFFF'
+    }
   },
   plugins: [],
 }

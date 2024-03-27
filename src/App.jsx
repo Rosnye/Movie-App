@@ -7,7 +7,7 @@ import Carousel from './components/MovieCarrousel'
 function App() {
 
   return (
-    <div className="min-h-screen pb-8 bg-gray-800">
+    <div className="min-h-screen min-w-96 pb-8 bg-Squares">
       <Nav/>
       <Carousel/>
     </div>
