@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage:{
-        'Squares':"url('./assets/protruding-squares.svg')",
+        'Squares':"url('./protruding-squares.svg')",
       },
     },
     colors:{
