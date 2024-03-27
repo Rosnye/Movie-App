@@ -21,3 +21,9 @@ export default {
   plugins: [],
 }
 
+{/*
+
+  route for deploy server "./source.jpg"
+  route for dev server    "./assets/source.jpg"
+
+*/}
