@@ -11,10 +11,10 @@ const Carousel = () => {
         const fetchMovies = async () => {
             try {
                 const response = await axios.get('https://www.omdbapi.com/?', {
-                    params: {
-                        apikey: omdbApiKey,
-                        s: searchTerm.trim(), // Aquí puedes poner tu término de búsqueda
-                        type: 'movie',
+                    params: {   // Aqui se agregan los parametros para hacer la peticion a la api
+                        apikey: omdbApiKey, // Api key
+                        s: searchTerm.trim(),   // Aqui se indica el titulo de la api
+                        type: 'movie',  // Tipo de valor
                         page: currentPage,
                     },
                     

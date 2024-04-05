@@ -3,7 +3,6 @@ import react from '@vitejs/plugin-react';
 import replace from '@rollup/plugin-replace';
 import dotenv from 'dotenv';
 
-// Cargar las variables de entorno desde el archivo .env
 dotenv.config();
 
 export default defineConfig({
